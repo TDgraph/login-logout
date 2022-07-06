@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+        
+    <title>Register</title>
+
+    <!-- css link-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <script>
+        window.addEventListener('load', function() {
+        
+        let checkBio = JSON.parse(localStorage.getItem('userBio'));
+    
+        if(checkBio != null) {
+            window.location.href = 'user.html';
+        }
+    })
+    </script>
+    <!-- Start Of Container -->
+    <div class="container">
+        <header>
+            <h1>Local Storage Registration Page</h1>
+        </header>
+        <div class="show-err"></div>
+        <!-- Registration Form-->
+        <form method="POST" action="">
+            <input type="text" name="name" placeholder="Enter Your Name">
+            <label>Name</label>
+            
+            <input type="email" name="email" placeholder="Enter Your Email">
+            <label>Email</label>
+
+            <input type="password" name="password" placeholder="Enter Your Password">
+            <label>Password</label>
+
+            <!-- Submit button -->
+            <button id="btn">Register</button>
+
+            <p>Registered Already?<a href="login.html">Login</a></p>
+        </form>
+    </div>
+    <!-- End Of Container-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+
+    <script src="./js/register.js"></script>
+</body>
+</html>
